@@ -1,0 +1,37 @@
+C:\Users\oskarskog\Desktop\Memory\Memory\bin\Debug\Memory.exe.config
+C:\Users\oskarskog\Desktop\Memory\Memory\bin\Debug\Memory.exe
+C:\Users\oskarskog\Desktop\Memory\Memory\bin\Debug\Memory.pdb
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\Memory.csprojResolveAssemblyReference.cache
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\MainWindow.g.cs
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\views\MainMenu.g.cs
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\App.g.cs
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\Memory_MarkupCompile.cache
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\Memory_MarkupCompile.lref
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\MainWindow.baml
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\views\MainMenu.baml
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\Memory.g.resources
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\Memory.Properties.Resources.resources
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\Memory.csproj.GenerateResource.Cache
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\Memory.exe
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\Memory.pdb
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\views\MainBoard.g.cs
+C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\views\MainBoard.baml
+C:\Users\Oskar SKog\Desktop\Memory\Memory\bin\Debug\Memory.exe.config
+C:\Users\Oskar SKog\Desktop\Memory\Memory\obj\Debug\Memory.exe
+C:\Users\Oskar SKog\Desktop\Memory\Memory\obj\Debug\Memory.pdb
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\bin\Debug\Memory.exe.config
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\Memory.exe
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\Memory.pdb
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\Memory.csprojResolveAssemblyReference.cache
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\MainWindow.g.cs
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\Views\MainMenu.g.cs
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\App.g.cs
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\Memory_MarkupCompile.cache
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\Memory_MarkupCompile.lref
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\bin\Debug\Memory.exe
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\bin\Debug\Memory.pdb
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\MainWindow.baml
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\Views\MainMenu.baml
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\Memory.g.resources
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\Memory.Properties.Resources.resources
+C:\Users\Oskar SKog\Desktop\Memory Project\Memory\Memory\obj\Debug\Memory.csproj.GenerateResource.Cache
