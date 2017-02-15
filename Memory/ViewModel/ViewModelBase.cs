@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Memory.ViewModel
 {
-    public abstract class NotifyChange
+    public abstract class ViewModelBase
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -12,9 +12,13 @@ namespace Memory.Model
     {
         public Image Front;
         public Image Back;
-        public Image VisibleImage;
 
         public int Identifier;
 
+        public CardModel()
+        {
+            Front = new Image();
+            Back = new Image();
+        }
     }
 }
