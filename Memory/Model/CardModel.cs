@@ -10,15 +10,7 @@ namespace Memory.Model
 {
     public class CardModel
     {
-        public Image Front;
-        public Image Back;
-
-        public int Identifier;
-
-        public CardModel()
-        {
-            Front = new Image();
-            Back = new Image();
-        }
+        public Uri Uri { get; set; }
+        public int Identifier { get; set; }
     }
 }

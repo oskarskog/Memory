@@ -12,52 +12,28 @@ namespace Memory.ViewModel
     public class CardViewModel : ViewModelBase
     {
         private Model.CardModel _cardModel;
+        public BitmapImage Image { get; private set; }
 
-        public bool Visible { get; private set; }
-        public Image ShownImage { get; private set; }
-
-        public CardViewModel(string fname)
+        public CardViewModel(Uri uri)
         {
-            _cardModel = new Model.CardModel();
-            LoadImage(fname);
+            _cardModel = new Model.CardModel() { Uri = uri, Identifier = 0 };
+            LoadImage();
         }
 
-        private void LoadImage(string fname)
+        private void LoadImage()
         {
             try
             {
-                var root = Directory.GetCurrentDirectory();
-                var uri = new Uri(string.Format(@"{0}/../../Assets/Images/{1}", root, fname), UriKind.Absolute);
-                var bmp = new BitmapImage();
-                bmp.BeginInit();
-                bmp.UriSource = uri;
-                bmp.EndInit();
-                _cardModel.Front.Source = bmp;
-                _cardModel.Back.Source = bmp;
-                ShownImage = _cardModel.Front;
+                Image = new BitmapImage(_cardModel.Uri);
             }
             catch(Exception e)
             {
                 Console.WriteLine("Failed to load image!");
                 Console.WriteLine(e.Message);
+                return;
             }
 
-            NotifyPropertyChanged("ShownImage");
-        }
-
-        public void Flip()
-        {
-            if(Visible)
-            {
-                ShownImage = _cardModel.Back;
-                Visible = false;
-            }
-            else
-            {
-                ShownImage = _cardModel.Front;
-                Visible = true;
-            }
-            NotifyPropertyChanged("ShownImage");
+            NotifyPropertyChanged("Image");
         }
     }
 }

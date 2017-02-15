@@ -9,6 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Memory.ViewModel;
 using Memory.views;
 using System;
 using System.Diagnostics;

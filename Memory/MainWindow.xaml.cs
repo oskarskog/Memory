@@ -23,8 +23,7 @@ namespace Memory
         public MainWindow()
         {
             InitializeComponent();
-            var vm = new ViewModel.GameViewModel();
-            DataContext = vm;
+            DataContext = new ViewModel.GameViewModel();
         }
     }
 }

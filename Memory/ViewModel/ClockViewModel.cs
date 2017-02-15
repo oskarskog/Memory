@@ -7,7 +7,7 @@ using System.Windows.Threading;
 
 namespace Memory.ViewModel
 {
-    class ClockViewModel : ViewModelBase
+    public class ClockViewModel : ViewModelBase
     {
         private DispatcherTimer _timer;
         private TimeSpan _second;
