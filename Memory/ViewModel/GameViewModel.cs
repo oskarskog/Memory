@@ -7,30 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media.Imaging;
 
 namespace Memory.ViewModel
 {
-    public class GameViewModel : ViewModelBase
+    public class GameViewModel : ObservableObjectBase
     {
-        public ObservableCollection<CardViewModel> Cards { get; private set; }
-        public ClockViewModel Clock { get; private set; }
+        public Model.CardCollectionModel Cards { get; private set; }
+        public Model.ClockModel Clock { get; private set; }
 
         public GameViewModel()
         {
-            Clock = new ClockViewModel();
-            Cards = new ObservableCollection<CardViewModel>();
-            Setup();
+            Clock = new Model.ClockModel();
+            Cards = new Model.CardCollectionModel();
+
+            Cards.LoadCards();
+            Clock.Start();
         }
 
-        private void Setup()
+
+        // Routed UI comands
+        public class Commands
         {
-            DirectoryInfo imgDir = new DirectoryInfo(@"..\..\Assets\Images");
-            foreach(var imgFile in imgDir.GetFiles("*.jpg"))
-            {
-                var uri = new Uri(imgFile.FullName);
-                Cards.Add(new CardViewModel(uri));
-            }
+            
+
         }
     }
 }

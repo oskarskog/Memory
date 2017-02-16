@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Memory.ViewModel
+namespace Memory
 {
-    public abstract class ViewModelBase
+    public abstract class ObservableObjectBase
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -25,8 +25,8 @@
                             <!-- Binds Image to the bitmap property Image in the card viewmodel -->
                             <Image Source="{Binding Path=Image}"
                                    Stretch="Fill"
-                                   Width="100"
-                                   Height="120" 
+                                   Width="120"
+                                   Height="150" 
                                    />
                         </Border>
                     </DataTemplate>

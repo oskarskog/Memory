@@ -55,11 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\CardCollectionModel.cs" />
     <Compile Include="Model\CardModel.cs" />
-    <Compile Include="ViewModel\CardViewModel.cs" />
-    <Compile Include="ViewModel\ClockViewModel.cs" />
+    <Compile Include="Model\ClockModel.cs" />
     <Compile Include="ViewModel\GameViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="ObservableObjectBase.cs" />
     <Compile Include="Views\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>

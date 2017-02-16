@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
 
-namespace Memory.ViewModel
+namespace Memory.Model
 {
-    public class ClockViewModel : ViewModelBase
+    public class ClockModel : ObservableObjectBase
     {
         private DispatcherTimer _timer;
         private TimeSpan _second;
-        public TimeSpan ElapsedTime { get; private set; }
+        private TimeSpan ElapsedTime;
 
-        public ClockViewModel()
+        public ClockModel()
         {
             ElapsedTime = new TimeSpan(0, 0, 0);
             _second = new TimeSpan(0, 0, 1);
