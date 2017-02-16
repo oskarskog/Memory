@@ -8,12 +8,8 @@
         Title="MainWindow" Height="350" Width="525">
     
     <!-- 
-    Inspiration and guidance found here
+    Inspiration and guidance for cunstomizing the listbox is found here
     https://www.codeproject.com/Articles/18561/Custom-ListBox-Layout-in-WPF
-    
-    Problem is that i can't find out how to bind images from the collection Cards to a grid type of container.
-    My current attempt is trying to modify a listbox by later changing the ItemsPanel property to WrapPanel to get the window to
-    automagically rearrange the images, i tried following the tutorial linked above by to no success :(
     -->
 
     <Window.Resources>
@@ -23,7 +19,9 @@
                     <DataTemplate>
                         <Border BorderBrush="Black" BorderThickness="1"
                                 CornerRadius="5" Margin="5">
-                            <Image Source="{Binding Path=}"
+
+                            <!-- Binds Image to the bitmap property Image in the card viewmodel -->
+                            <Image Source="{Binding Path=Image}"
                                    Stretch="Fill"
                                    Width="100"
                                    Height="120" />
@@ -31,11 +29,26 @@
                     </DataTemplate>
                 </Setter.Value>
             </Setter>
+            
+            <!-- Sets itemspanel for the listbox to a WrapPanel -->
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+            
+            <!-- Removes scrollbar from listbox, forces items to fit in screen -->
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled">
+            </Setter>
+            
         </Style>
     </Window.Resources>
 
     <StackPanel>
-        <ListBox ItemsSource="{Binding}"></ListBox>
+        <!-- Binds ListBox to draw content from the Cards collection -->
+        <ListBox ItemsSource="{Binding Cards}"></ListBox>
     </StackPanel>
 
 </Window>
