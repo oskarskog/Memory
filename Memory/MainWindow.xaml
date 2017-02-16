@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Memory.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="800" Width="1080">
     
     <!-- 
     Inspiration and guidance for cunstomizing the listbox is found here
@@ -13,6 +13,8 @@
     -->
 
     <Window.Resources>
+        
+        <!-- ListBox styling -->
         <Style TargetType="{x:Type ListBox}">
             <Setter Property="ItemTemplate">
                 <Setter.Value>
@@ -24,7 +26,8 @@
                             <Image Source="{Binding Path=Image}"
                                    Stretch="Fill"
                                    Width="100"
-                                   Height="120" />
+                                   Height="120" 
+                                   />
                         </Border>
                     </DataTemplate>
                 </Setter.Value>
@@ -44,11 +47,44 @@
             </Setter>
             
         </Style>
+        
+        <!-- Button Styling -->
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="75"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+        </Style>
+        
     </Window.Resources>
 
-    <StackPanel>
+    <DockPanel LastChildFill="True">
+
+        <TextBlock Text="{Binding Clock}" 
+                   Margin="20,20,20,20" 
+                   MaxWidth="150"
+                   MinWidth="75"
+                   HorizontalAlignment="Left" 
+                   DockPanel.Dock="Top"
+                   />
+
+        <!-- Right hand stackpanel will contain buttons and top 5 list -->
+        <StackPanel DockPanel.Dock="Right" Margin="20, 50, 20,20">
+
+            <Button Content="Start"/>
+
+            <TextBlock Text="Top 5"
+                       Margin="0,15,0,0"
+                       />
+            <TextBox Width="150"
+                     Height="400"
+                     />
+
+            <Button Content="Restart" Margin="0,20,0,20"/>
+            <Button Content="Exit" />
+
+        </StackPanel>
+        
         <!-- Binds ListBox to draw content from the Cards collection -->
         <ListBox ItemsSource="{Binding Cards}"></ListBox>
-    </StackPanel>
+    </DockPanel>
 
 </Window>
