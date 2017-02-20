@@ -81,6 +81,11 @@
                    MinWidth="75"
                    />
 
+            <TextBlock Text="Tries: "
+                       Margin="20,0,0,0" />
+
+            <TextBlock Text="{Binding Path=Tries}" />
+
         </StackPanel>
 
         <!-- Right hand stackpanel will contain buttons and top 5 list -->

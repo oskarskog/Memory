@@ -17,14 +17,22 @@ namespace Memory.ViewModel
         public Model.CardCollectionModel Cards { get; private set; }
         public Model.ClockModel Clock { get; private set; }
 
+        public int MatchedCards { get; private set; }
+        public int Tries { get; private set; }
+
         private bool _gameStarted;
+        private int _clicks;
 
         public GameViewModel()
         {
+            MatchedCards = 0;
+            Tries = 0;
+
             Clock = new Model.ClockModel();
             Cards = new Model.CardCollectionModel();
 
             _gameStarted = true;
+            _clicks = 0;
 
             Clock.Start();
         }
@@ -32,7 +40,18 @@ namespace Memory.ViewModel
         public void flipcard_executed(object sender, ExecutedRoutedEventArgs e)
         {
             int index = (int)e.Parameter;
-            Cards.FlipAtIndex(index);
+            if (Cards.FlipAtIndex(index)) // returns true if match
+            {
+                MatchedCards++;
+                NotifyPropertyChanged("MatchedCards");
+            }
+
+            _clicks++;
+            if(_clicks % 2 == 0)
+            {
+                Tries++;
+                NotifyPropertyChanged("Tries");
+            }
         }
 
         public void flipcard_canexecute(object sender, CanExecuteRoutedEventArgs e)

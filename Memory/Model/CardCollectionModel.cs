@@ -59,7 +59,7 @@ namespace Memory.Model
             }
         }
 
-       public void FlipAtIndex(int index)
+       public bool FlipAtIndex(int index)
         {
             var c = this.First(x => x.Index == index);
 
@@ -81,10 +81,13 @@ namespace Memory.Model
                 {
                     MatchedPairs++;
                     _flippedCards = 0;
+                    return true;
                 }
                 else
                     _timer.Start();
             }
+
+            return false;
         }
 
         private void onTimerTick(object o, EventArgs args)
