@@ -28,7 +28,16 @@ namespace Memory.views
         private void nameButton_Click(object sender, RoutedEventArgs e)
         {
             Name = nameInput.Text;
-            this.Close();
+            if (Name.Length > 0)
+            {
+                var mw = new MainWindow(Name);
+                mw.Show();
+                this.Close();
+            }
+            else
+            {
+                warning_text.Text = "You must enter a name";
+            }
         }
     }
 }

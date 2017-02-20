@@ -19,12 +19,14 @@ namespace Memory.ViewModel
 
         public int MatchedCards { get; private set; }
         public int Tries { get; private set; }
+        public string PlayerName { get; private set; }
 
         private bool _gameStarted;
         private int _clicks;
 
-        public GameViewModel()
+        public GameViewModel(string playerName)
         {
+            PlayerName = playerName;
             MatchedCards = 0;
             Tries = 0;
 

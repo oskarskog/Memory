@@ -22,10 +22,10 @@ namespace Memory
     {
         ViewModel.GameViewModel vm;
 
-        public MainWindow()
+        public MainWindow(string playerName)
         {
             InitializeComponent();
-            vm = new ViewModel.GameViewModel();
+            vm = new ViewModel.GameViewModel(playerName);
             DataContext = vm;
         }
 

@@ -74,7 +74,11 @@
                      HorizontalAlignment="Left"
                      >
 
+            <TextBlock Text="Player Name: "/>
+            <TextBlock Text="{Binding PlayerName}" />
+
             <TextBlock Text="Time Played: "
+                       Margin="20, 0,0,0"
                    />
             <TextBlock Text="{Binding Clock.ElapsedTime}" 
                    MaxWidth="150"
