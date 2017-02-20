@@ -32,7 +32,8 @@ namespace Memory.ViewModel
 
         public void flipcard_executed(object sender, ExecutedRoutedEventArgs e)
         {
-            var card = sender as Model.CardModel;
+            int index = (int)e.Parameter;
+            var card = Cards.First(c => c.Index == index);
             card.Flip();
         }
 
