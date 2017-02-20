@@ -11,7 +11,7 @@ namespace Memory.Model
     {
         private DispatcherTimer _timer;
         private TimeSpan _second;
-        private TimeSpan ElapsedTime;
+        public TimeSpan ElapsedTime { get; private set; }
 
         public ClockModel()
         {
@@ -40,7 +40,7 @@ namespace Memory.Model
 
         private void OnTimerTick(object o, EventArgs a)
         {
-            ElapsedTime.Add(_second);
+            ElapsedTime = ElapsedTime.Add(_second);
             NotifyPropertyChanged("ElapsedTime");
         }
     }

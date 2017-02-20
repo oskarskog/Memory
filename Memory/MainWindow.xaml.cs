@@ -20,10 +20,19 @@ namespace Memory
     /// </summary>
     public partial class MainWindow : Window
     {
+        ViewModel.GameViewModel vm;
+
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new ViewModel.GameViewModel();
+            vm = new ViewModel.GameViewModel();
+            DataContext = vm;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            CommandBindings.Add(new CommandBinding(ViewModel.Commands.FlipCard, vm.flipcard_executed, 
+                vm.flipcard_canexecute));
         }
     }
 }

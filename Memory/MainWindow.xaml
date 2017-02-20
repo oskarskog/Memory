@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Memory.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1080">
+        Title="MainWindow" Height="920" Width="1230"
+        Loaded="Window_Loaded"
+        >
     
     <!-- 
     Inspiration and guidance for cunstomizing the listbox is found here
@@ -23,11 +25,17 @@
                                 CornerRadius="5" Margin="5">
 
                             <!-- Binds Image to the bitmap property Image in the card viewmodel -->
-                            <Image Source="{Binding Path=Image}"
-                                   Stretch="Fill"
-                                   Width="120"
-                                   Height="150" 
-                                   />
+                            <Button Width="180"
+                                    Height="180"
+                                    Command="local:Commands.FlipCard" IsEnabled="True"
+                                    >
+                                
+                                <Image Source="{Binding Path=Image}"
+                                       Stretch="Fill"
+                                       Width="180"
+                                       Height="180"
+                                       />
+                            </Button>
                         </Border>
                     </DataTemplate>
                 </Setter.Value>
@@ -58,7 +66,7 @@
 
     <DockPanel LastChildFill="True">
 
-        <TextBlock Text="{Binding Clock}" 
+        <TextBlock Text="{Binding Clock.ElapsedTime}" 
                    Margin="20,20,20,20" 
                    MaxWidth="150"
                    MinWidth="75"

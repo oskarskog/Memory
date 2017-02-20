@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Memory
 {
-    public abstract class ObservableObjectBase
+    public abstract class ObservableObjectBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
