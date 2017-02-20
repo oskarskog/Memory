@@ -49,7 +49,6 @@ D:\Development\Memory\Memory\Memory\obj\Debug\Views\MainMenu.baml
 D:\Development\Memory\Memory\Memory\obj\Debug\Memory.g.resources
 D:\Development\Memory\Memory\Memory\obj\Debug\Memory.Properties.Resources.resources
 D:\Development\Memory\Memory\Memory\obj\Debug\Memory.csproj.GenerateResource.Cache
-C:\Users\oskarskog\Desktop\Memory\Memory\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Development\Memory\Memory\bin\Debug\Memory.exe.config
 D:\Development\Memory\Memory\obj\Debug\Memory.exe
 D:\Development\Memory\Memory\obj\Debug\Memory.pdb

@@ -21,18 +21,12 @@ namespace Memory.Model
             BitmapImage backSide = null;
             var images = new List<BitmapImage>();
             DirectoryInfo imgDir = new DirectoryInfo(@"..\..\Assets\Images");
+            backSide = new BitmapImage(new Uri(imgDir.FullName + @"\backside.jpg"));
 
             foreach (var imgFile in imgDir.GetFiles("*.jpg"))
             {
-                if (imgFile.FullName.Split('\\').Last() == "backside.jpg")
-                    backSide = new BitmapImage(new Uri(imgFile.FullName));
-                else
-                    images.Add(new BitmapImage(new Uri(imgFile.FullName)));
-            }
-
-            foreach(var image in images)
-            {
-                this.Add(new CardModel(image, backSide));
+                if (imgFile.FullName.Split('\\').Last() != "backside.jpg")
+                   this.Add(new CardModel(new BitmapImage(new Uri(imgFile.FullName)), backSide));
             }
         }
     }
