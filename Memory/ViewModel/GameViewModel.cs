@@ -26,15 +26,13 @@ namespace Memory.ViewModel
 
             _gameStarted = true;
 
-            Cards.LoadCards();
             Clock.Start();
         }
 
         public void flipcard_executed(object sender, ExecutedRoutedEventArgs e)
         {
             int index = (int)e.Parameter;
-            var card = Cards.First(c => c.Index == index);
-            card.Flip();
+            Cards.FlipAtIndex(index);
         }
 
         public void flipcard_canexecute(object sender, CanExecuteRoutedEventArgs e)

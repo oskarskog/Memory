@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Memory.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="920" Width="1450"
+        Title="MainWindow" Height="900" Width="1430"
         Loaded="Window_Loaded"
+        ResizeMode="NoResize"
         >
     
     <!-- 
@@ -67,13 +68,20 @@
 
     <DockPanel LastChildFill="True">
 
-        <TextBlock Text="{Binding Clock.ElapsedTime}" 
-                   Margin="20,20,20,20" 
+        <StackPanel  DockPanel.Dock="Top" 
+                     Margin="20,20,0,10" 
+                     Orientation="Horizontal"
+                     HorizontalAlignment="Left"
+                     >
+
+            <TextBlock Text="Time Played: "
+                   />
+            <TextBlock Text="{Binding Clock.ElapsedTime}" 
                    MaxWidth="150"
                    MinWidth="75"
-                   HorizontalAlignment="Left" 
-                   DockPanel.Dock="Top"
                    />
+
+        </StackPanel>
 
         <!-- Right hand stackpanel will contain buttons and top 5 list -->
         <StackPanel DockPanel.Dock="Right" Margin="20, 50, 20,20">
