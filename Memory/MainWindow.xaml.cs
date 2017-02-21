@@ -33,6 +33,15 @@ namespace Memory
         {
             CommandBindings.Add(new CommandBinding(ViewModel.Commands.FlipCard, vm.flipcard_executed, 
                 vm.flipcard_canexecute));
+            
+            CommandBindings.Add(new CommandBinding(ViewModel.Commands.StartGame, vm.startgame_executed,
+               vm.startgame_canexecute));
+
+            CommandBindings.Add(new CommandBinding(ViewModel.Commands.RestartGame, vm.restartgame_executed,
+               vm.restartgame_canexecute));
+
+            CommandBindings.Add(new CommandBinding(ViewModel.Commands.ExitGame, vm.exitgame_executed,
+               vm.exitgame_canexecute));
         }
     }
 }

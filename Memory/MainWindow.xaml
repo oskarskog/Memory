@@ -16,9 +16,12 @@
     -->
 
     <Window.Resources>
-        
+
         <!-- ListBox styling -->
         <Style TargetType="{x:Type ListBox}">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+
             <Setter Property="ItemTemplate">
                 <Setter.Value>
                     <DataTemplate>
@@ -30,19 +33,19 @@
                                     Height="180"
                                     Command="local:Commands.FlipCard" IsEnabled="True" CommandParameter="{Binding Path=Index}"
                                     >
-                                
+
                                 <Image Source="{Binding Path=View}"
                                        Stretch="Fill"
                                        Width="180"
                                        Height="180"
                                        />
-                                
+
                             </Button>
                         </Border>
                     </DataTemplate>
                 </Setter.Value>
             </Setter>
-            
+
             <!-- Sets itemspanel for the listbox to a WrapPanel -->
             <Setter Property="ItemsPanel">
                 <Setter.Value>
@@ -51,19 +54,18 @@
                     </ItemsPanelTemplate>
                 </Setter.Value>
             </Setter>
-            
+
             <!-- Removes scrollbar from listbox, forces items to fit in screen -->
             <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled">
             </Setter>
-            
         </Style>
-        
+
         <!-- Button Styling -->
         <Style TargetType="{x:Type Button}">
             <Setter Property="Width" Value="75"></Setter>
             <Setter Property="Height" Value="30"></Setter>
         </Style>
-        
+
     </Window.Resources>
 
     <DockPanel LastChildFill="True">
@@ -95,7 +97,9 @@
         <!-- Right hand stackpanel will contain buttons and top 5 list -->
         <StackPanel DockPanel.Dock="Right" Margin="20, 50, 20,20">
 
-            <Button Content="Start"/>
+            <Button Content="Start"
+                    Command="local:Commands.StartGame" 
+                    IsEnabled="True"/>
 
             <TextBlock Text="Top 5"
                        Margin="0,15,0,0"
@@ -104,13 +108,22 @@
                      Height="400"
                      />
 
-            <Button Content="Restart" Margin="0,20,0,20"/>
-            <Button Content="Exit" />
+            <Button Content="Restart" 
+                    Margin="0,20,0,20"
+                    Command="local:Commands.RestartGame"
+                    IsEnabled="True"
+                    />
+            
+            <Button Content="Exit"
+                    Command="local:Commands.ExitGame"
+                    IsEnabled="True"
+                    />
 
         </StackPanel>
         
         <!-- Binds ListBox to draw content from the Cards collection -->
-        <ListBox ItemsSource="{Binding Cards}"></ListBox>
+        <ListBox ItemsSource="{Binding Cards}">
+        </ListBox>
     </DockPanel>
 
 </Window>

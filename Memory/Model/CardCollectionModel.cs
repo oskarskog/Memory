@@ -59,12 +59,24 @@ namespace Memory.Model
             }
         }
 
+        public void Reset()
+        {
+            foreach(var c in this)
+            {
+                if (c.IsFlipped)
+                    c.Flip();
+            }
+
+            MatchedPairs = 0;
+            _flippedCards = 0;
+        }
+
        public bool FlipAtIndex(int index)
         {
             var c = this.First(x => x.Index == index);
 
             // !Flipped = backside up
-            if (!c.Flipped && _flippedCards < 2)
+            if (!c.IsFlipped && _flippedCards < 2)
             {
                 if (_flippedCards < 1)
                     firstFlipped = c;

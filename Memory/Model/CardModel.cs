@@ -13,7 +13,7 @@ namespace Memory.Model
     {
         public BitmapImage View { get; private set; }
         public bool Matched { get; set; }
-        public bool Flipped { get; set; }
+        public bool IsFlipped { get; set; }
 
         public int Index { get; private set; }
         public int PairIndex { get; private set; }
@@ -37,12 +37,12 @@ namespace Memory.Model
             if (View == _front)
             {
                 View = _back;
-                Flipped = false;
+                IsFlipped = false;
             }
             else
             {
                 View = _front;
-                Flipped = true;
+                IsFlipped = true;
             }
 
             NotifyPropertyChanged("Flipped");
